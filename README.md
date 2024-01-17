@@ -21,7 +21,6 @@ Após ter todos os parâmetros listados acima, você deverá fazer a chamada da 
 Java:
 
   public class Main {
-
     public static void main(String[] args) {
         String cnpj = "seu cnpj";
         String XMLString = "xml a ser assinado";
