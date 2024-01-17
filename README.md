@@ -48,26 +48,23 @@ Java:
 
 PHP:
 
-<?php
-
-        $cnpj = "seu cnpj";
-        $XMLString = "xml a ser assinado";
-        $RefUri = "infNFe";
+      $cnpj = "seu cnpj";
+      $XMLString = "xml a ser assinado";
+      $RefUri = "infNFe";
 
         try {
-
+    
             $X509Cert = buscaCertificado($cnpj);
 
             if ($X509Cert !== null) {
-
-                $signedXML = assinaXML($XMLString, $RefUri, $X509Cert);
+        
+                 $signedXML = assinaXML($XMLString, $RefUri, $X509Cert);
                  echo $signedXML;
             } else {
-                 echo "Certificado não encontrado";
-            }
-            } catch (Exception $e) {
-                 echo "Erro: " . $e->getMessage();
-            }
-?>
+            echo "Certificado não encontrado";
+              }
+        } catch (Exception $e) {
+         echo "Erro: " . $e->getMessage();
+          }   
 
 A função **assinarXML** fará a assinatura do XML e retornará o mesmo assinado em modo de String.
