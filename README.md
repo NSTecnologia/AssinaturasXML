@@ -2,15 +2,15 @@
 
 ### Realizando assintatura de XML:
 
-Para realizar uma assintatura de XML, você poderá utilizar a função **assinarXML** da dll. Veja abaixo sobre os parâmetros necessários, e um exemplo de chamada do método.
+Para realizar uma assintatura de XML, você poderá utilizar a função **assinaXML** da dll. Veja abaixo sobre os parâmetros necessários, e um exemplo de chamada do método.
 
 #### Parâmetros:
 
 Parametros    | Tipo de Dado | Descrição
 :------------:|:------------:|:-----------
-conteudo      | String       | O documente XML a ser assinado.
+XMLString     | String       | O documente XML a ser assinado.
 refURI        | String       | Nodo do XML que deve assinar. Ex.: <ul> <li>**infNFe** - NFe</li> <li>**infNFe** - NFCe</li> <li>**infCTe** - CTe</li> <li>**infMDFe** - MDFe</li> <li>**infBPe** - BPe</li> </ul> .
-cnpjEmitente  | String   	 | CNPJ do Emitente da nota para que seja encontrado o certificado.
+X509Cert      | String   	 | Certificado encontrado.
 
 
 #### Exemplo de chamada:
@@ -67,4 +67,4 @@ PHP:
          echo "Erro: " . $e->getMessage();
           }   
 
-A função **assinarXML** fará a assinatura do XML e retornará o mesmo assinado em modo de String.
+A função **assinaXML** fará a assinatura do XML e retornará o mesmo assinado em modo de String.s
